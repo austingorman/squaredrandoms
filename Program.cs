@@ -5,7 +5,6 @@ namespace random
 {
     class Program
     {
-        g
         static void Main(string[] args)
         {
             Random random = new Random();
@@ -16,13 +15,11 @@ namespace random
 
             };
 
-            List<Double> squareNumList = new List<Double>();
+            List<int> squareNumList = new List<int>();
 
             foreach (var nums in numbers)
             {
-                // double squared = Math.Pow(nums, 2);
-                // List<int> squared = new List<int>();
-                squareNumList.Add(Math.Pow(nums, 2));
+                squareNumList.Add(nums ^ 2);
             }
             squareNumList.RemoveAll(i => i % 2 != 0);
             foreach (var oddNums in squareNumList)
